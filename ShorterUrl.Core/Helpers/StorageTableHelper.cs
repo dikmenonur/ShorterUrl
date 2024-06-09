@@ -202,23 +202,7 @@ namespace ShorterUrl.Core.Helpers
         }
     }
 
-    public class ClickStatsEntity : TableEntity
-    {
-        public ClickStatsEntity() { }
-
-        public ClickStatsEntity(string vanity)
-        {
-            PartitionKey = vanity;
-            RowKey = Guid.NewGuid().ToString();
-            Datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
-        }
-        public string PartitionKey { get; set; }
-        public string RowKey { get; set; }
-        public int ClickCount { get; set; }
-        public string Datetime { get; set; }
-
-    }
-
+   
     public class NextId : ShortUrlEntity
     {
        public long Id { get; set; }

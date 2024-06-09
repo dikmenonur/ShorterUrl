@@ -30,7 +30,7 @@ namespace ShorterUrl.Tools.Functions
             var result = new ListResponse();
             string userId = string.Empty;
 
-            StorageTableHelper stgHelper = new StorageTableHelper(_settings.DataStorage,"","");
+            StorageTableHelper stgHelper = new StorageTableHelper(_settings.DataStorage);
 
             try
             {

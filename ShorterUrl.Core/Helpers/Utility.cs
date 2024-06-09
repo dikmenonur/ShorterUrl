@@ -32,7 +32,7 @@ namespace ShorterUrl.Core.Helpers
             }
         }
 
-        public static string Encode(int i)
+        public static string Encode(long i)
         {
             if (i == 0)
                 return ConversionCode[0].ToString();
@@ -47,7 +47,7 @@ namespace ShorterUrl.Core.Helpers
 
         // generates a unique, random, and alphanumeric token for the use as a url 
         //(not entirely secure but not sequential so generally not guessable)
-        public static string GenerateUniqueRandomToken(int uniqueId)
+        public static string GenerateUniqueRandomToken(long uniqueId)
         {
             using (var generator = RandomNumberGenerator.Create())
             {
