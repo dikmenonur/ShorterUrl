@@ -22,11 +22,7 @@ namespace ShorterUrl.Core.Datasource
                 .HasKey(c => new { c.PartitionKey, c.RowKey });
 
             modelBuilder.Entity<ShortUrlEntity>()
-                .Property(e => e.SchedulesPropertyRaw)
-                .HasConversion(
-                    v => JsonSerializer.Serialize(v, new JsonSerializerOptions { WriteIndented = false }),
-                    v => JsonSerializer.Deserialize<List<ScheduleEntity>>(v, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
-                );
+                .Property(e => e.SchedulesPropertyRaw);
 
             modelBuilder.Entity<ScheduleEntity>()
                 .HasKey(c => new { c.PartitionKey, c.RowKey });
