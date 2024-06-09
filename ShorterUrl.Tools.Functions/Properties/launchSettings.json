@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "ShorterUrl.Tools.Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7155"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "DockerfileRunArguments": "--init",
+      "httpPort": 34047,
+      "useSSL": false
+    }
+  }
+}

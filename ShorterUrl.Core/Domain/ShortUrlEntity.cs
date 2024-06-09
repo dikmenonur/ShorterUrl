@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Azure;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ShorterUrl.Core.Domain
 {
-    public class ShortUrlEntity
+    public class ShortUrlEntity : TableEntity
     {
+        public long Id { get; set; }
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public DateTimeOffset? Timestamp { get; set; }
