@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShorterUrl.API", "ShorterUrl.API\ShorterUrl.API.csproj", "{F1825AFD-C72A-4FA3-A971-2C2AEBFEF4A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShorterUrl.Api", "ShorterUrl.API\ShorterUrl.Api.csproj", "{F1825AFD-C72A-4FA3-A971-2C2AEBFEF4A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShorterUrl.Core", "ShorterUrl.Core\ShorterUrl.Core.csproj", "{D2957791-4BF4-435C-94D3-1BCD0A9E2464}"
 EndProject

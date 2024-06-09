@@ -9,17 +9,19 @@ using System.Threading.Tasks;
 
 namespace ShorterUrl.Core.Datasource
 {
-    public class UrlShortenerContext : DbContext,IUrlShortenerContext
+    public class UrlShortenerContext : DbContext, IUrlShortenerContext
     {
         public UrlShortenerContext(DbContextOptions<UrlShortenerContext> options) : base(options)
         {
         }
         public DbSet<ShortUrlEntity> ShortUrlEntities { get; set; }
+        public DbSet<ScheduleEntity> ScheduleEntities { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-         modelBuilder.Entity<ShortUrlEntity>()
-                .HasKey(c => new { c.PartitionKey, c.RowKey });
+            modelBuilder.Entity<ShortUrlEntity>()
+                   .HasKey(c => new { c.PartitionKey, c.RowKey });
 
             modelBuilder.Entity<ShortUrlEntity>()
                 .Property(e => e.SchedulesPropertyRaw);
